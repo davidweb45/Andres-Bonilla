@@ -1,12 +1,13 @@
 /* RESET BÁSICO Y VARIABLES */
 :root {
-    --primary-color: #004AAD; /* Azul profesional */
-    --secondary-color: #333; /* Gris oscuro */
-    --text-color: #555;
-    --background-color: #f8f8f8;
+    --primary-color: #0040ff;
+    --secondary-color: #040cff;
+    --background-color: #f9f9f9;
+    --text-color: #040000;
     --white: #ffffff;
+    --gradient-bottom: linear-gradient(135deg, #0040ff 0%, #00bfff 100%);
+    --sea-green: #2E8B57;
 }
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,55 +15,58 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #002B5B 0%, #0040FF 50%, #5ABF90 100%);
+  color: #222;
+  overflow-x: hidden;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 0;
-}
-
-/* --------------------
-    CABECERA Y NAVEGACIÓN
--------------------- */
-/* --- Header principal --- */
-/* ======= HEADER GENERAL ======= */
+/* ====== SECCIÓN HERO ====== */
 .hero {
-  background: linear-gradient(to bottom, #f6f6f6, #ffffff);
-  text-align: center;
-  padding: 80px 20px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-/* ======= CONTENIDO ======= */
-.hero-content {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* ======= LOGO Y NOMBRE ======= */
-.logo-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  max-width: 1400px;
+  margin: 70px auto;
+  padding: 70px 10%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.logo {
-  background-color: #1500ff; /* Naranja */
-  color: white;
-  font-weight: bold;
-  font-size: 22px;
-  border-radius: 8px;
-  padding: 10px 14px;
-  letter-spacing: 1px;
+/* ====== TEXTO Y BOTONES ====== */
+.hero h1,
+.hero h2 {
+  color: #002B5B;
 }
+
+.subtitle {
+  color: #0040FF;
+}
+
+.btn-primary {
+  background-color: #0040FF;
+}
+
+.btn-outline {
+  border: 2px solid #0040FF;
+  color: #0040FF;
+}
+
+.btn-outline:hover {
+  background-color: #0040FF;
+  color: white;
+}
+
+/* ====== FOTO PROFESIONAL ====== *
+
+/* ======= LOGO Y NOMBRE ======= */
+
+
+
 
 .hero h1 {
   font-size: 24px;
@@ -89,10 +93,7 @@ body {
   transform: scale(1.05);
 }
 
-.firma:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 6px #00bfff);
-}
+
 
 /* --- Menú de navegación --- */
 nav ul {
@@ -154,30 +155,6 @@ nav ul li a:hover::after {
     align-items: center;
 }
 
-.header h1 {
-    font-size: 0.5em;
-    font-weight: 700;
-}
-
-.header nav ul {
-    list-style: none;
-    display: flex;
-}
-
-.header nav ul li {
-    margin-left: 10px;
-}
-
-.header nav a {
-    color: var(--blue);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.header nav a:hover {
-    color: #d4b921; /* Un color de acento, dorado */
-}
 
 
 /* --------------------
@@ -201,33 +178,24 @@ nav ul li a:hover::after {
 }
 
 .hero-image {
-    flex-shrink: 0;
-}
-
-.profile-photo {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: contain;
-    border: 4px solid var(--primary-color);
-    box-shadow: 0 4px 12px rgba(0, 74, 173, 0.3);
+    flex-shrink: 80;
 }
 
 .hero h2 {
     color: var(--secondary-color);
-    font-size: 2.5em;
+    font-size: 2.8em;
     margin-bottom: 15px;
 }
 
 .hero .profesion {
     color: var(--primary-color);
-    font-size: 1.2em;
+    font-size: 1.8em;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.1em;
+    font-size: 1.5em;
     max-width: 700px;
     margin: 0 auto 30px;
 }
@@ -252,14 +220,14 @@ nav ul li a:hover::after {
     SECCIÓN DE SERVICIOS
 -------------------- */
 .services {
-    padding: 40px 0;
+    padding: 80px 0;
     text-align: center;
     background-color: var(--background-color);
 }
 
 .services h2 {
     color: var(--primary-color);
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     font-size: 2em;
 }
 
@@ -410,4 +378,239 @@ nav ul li a:hover::after {
         font-size: 2em;
     }
 }
+
+/* ====== SECCIÓN PRINCIPAL ====== */
+.hero {
+  padding: 100px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ====== CONTENEDOR CENTRAL ====== */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1200px;
+}
+
+/* ====== INFORMACIÓN ====== */
+.info {
+  flex: 1 1 500px;
+  text-align: center;
+}
+
+/* ====== LOGO Y NOMBRE ====== */
+.logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  background-color: #0040ff;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.logo-box h1 {
+  font-size: 26px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* ====== SUBTÍTULO ====== */
+.subtitle {
+  color: #0040ff;
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+/* ====== TÍTULO PRINCIPAL ====== */
+.main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+/* ====== DESCRIPCIÓN ====== */
+.description {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* ====== BOTONES ====== */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-primary {
+  background-color: #0040ff;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #002eb8;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 2px solid #0040ff;
+  color: #0040ff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #0040ff;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* ====== FOTO ====== */
+/* Estilos para el contenedor de la imagen */
+.image-container {
+  display: flex; /* Para centrar la imagen si es necesario */
+  justify-content: center;
+  align-items: center;
+  padding: 15px; /* Espaciado alrededor de la imagen */
+  background-image: linear-gradient(to right, #e0f2f7, #c1e4f4); /* Fondo sutil degradado */
+  border-radius: 15px; /* Bordes redondeados para el contenedor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto 3D */
+  overflow: hidden; /* Asegura que la sombra y los bordes redondeados se vean bien */
+  max-width: 300px; /* Limita el ancho del contenedor */
+  margin: 0 auto; /* Centra el contenedor si no está en un flexbox */
+}
+
+/* Estilos para la imagen en sí */
+.profile-picture {
+  width: 100%; /* La imagen ocupará el 100% del ancho de su contenedor */
+  max-width: 250px; /* Tamaño máximo para la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 50%; /* ¡Esto la hará redonda! */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  border: 4px solid #fff; /* Borde blanco alrededor de la imagen */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra adicional para la imagen */
+  transition: transform 0.3s ease-in-out; /* Transición suave para efectos hover */
+}
+
+/* Efecto al pasar el ratón sobre la imagen (opcional) */
+.profile-picture:hover {
+  transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .image-container {
+    padding: 10px;
+    max-width: 250px;
+  }
+  .profile-picture {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    max-width: 200px;
+  }
+  .profile-picture {
+    max-width: 150px;
+  }
+}
+
+/* Estilos para el contenedor de la imagen */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Reducimos un poco el padding */
+  /* Mantendremos el degradado que ya tienes en el fondo de la imagen,
+     así que podemos quitar el background-image de aquí
+     si ya está cubierto por el fondo de la sección principal.
+     Si quieres que el contenedor de la imagen tenga su propio fondo, déjalo.
+     Por ahora, lo comento para ver cómo se ve sin él y con el fondo de la sección. */
+  /* background-image: linear-gradient(to right, #e0f2f7, #c1e4f4); */
+  border-radius: 18px; /* Un poco más redondeado para el contenedor */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra un poco más pronunciada */
+  overflow: hidden;
+  max-width: 280px; /* Ajustamos un poco el ancho máximo */
+  margin-left: auto; /* Alinea el contenedor a la derecha */
+  margin-right: auto; /* Alinea el contenedor a la izquierda */
+  /* Para que se centre horizontalmente si no está en un flexbox padre con espacio */
+  /* Si está dentro de un flexbox padre, como parece, puedes quitar los margins auto */
+
+  /* Añadimos un pequeño borde para definir mejor el área de la tarjeta de la imagen */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Borde blanco semi-transparente */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para la tarjeta */
+  backdrop-filter: blur(5px); /* Efecto de cristal esmerilado, si el navegador lo soporta */
+  -webkit-backdrop-filter: blur(5px); /* Soporte para navegadores WebKit */
+}
+
+/* Estilos para la imagen en sí */
+.profile-picture {
+  width: 100%;
+  max-width: 220px; /* Ajustamos el tamaño máximo de la imagen dentro del contenedor */
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffffff; /* Borde blanco más grueso */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más fuerte para la imagen */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el ratón sobre la imagen (opcional) */
+.profile-picture:hover {
+  transform: scale(1.08) rotate(2deg); /* Ligeramente más grande y un poco de rotación */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra aún más pronunciada */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .image-container {
+    padding: 8px;
+    max-width: 220px;
+    border-radius: 15px;
+  }
+  .profile-picture {
+    max-width: 180px;
+    border: 4px solid #ffffff;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    max-width: 180px;
+    padding: 6px;
+  }
+  .profile-picture {
+    max-width: 140px;
+    border: 3px solid #ffffff;
+  }
+}
+
 
